@@ -11,8 +11,9 @@ The Referee is a decision-making tool that compares options across multiple dime
 - 🔍 **Multi-Domain Comparisons**: Cloud services, JavaScript frameworks, API approaches
 - ⚖️ **Trade-off Analysis**: Clear pros/cons with contextual scoring (1-5 scale)
 - 🎯 **Context-Aware Recommendations**: "Best for" and "avoid when" guidance
-- 🖥️ **Interactive CLI**: Guided prompts or direct command usage
-- 🎨 **Colorized Output**: Easy-to-read formatted results
+- 🖥️ **CLI Interface**: Interactive command-line tool with guided prompts
+- 🌐 **Web Interface**: Beautiful browser-based UI with responsive design
+- 🎨 **Rich Formatting**: Color-coded results and professional styling
 - 🔧 **Extensible Architecture**: Easy to add new comparison domains
 
 ## 🚀 Quick Start
@@ -26,12 +27,26 @@ cd Kiro-Week-6-Challenge-The-Referee
 
 # Install dependencies
 npm install
+```
 
+### Usage Options
+
+**🖥️ CLI Version (Command Line)**
+```bash
 # Run in interactive mode
 npm start
 
 # Or run directly
 node src/cli.js compare --interactive
+```
+
+**🌐 Web Version (Browser)**
+```bash
+# Start web server
+npm run web
+
+# Then open in browser:
+# http://localhost:3000
 ```
 
 ### Requirements
@@ -41,8 +56,22 @@ node src/cli.js compare --interactive
 
 ## 📖 Usage
 
-### Interactive Mode (Recommended)
+### 🌐 Web Interface (Recommended)
 
+```bash
+npm run web
+```
+
+Open **http://localhost:3000** in your browser for:
+- Beautiful, responsive interface
+- Interactive forms with auto-fill defaults
+- Color-coded score tables
+- Smooth animations and professional styling
+- Mobile-friendly design
+
+### 🖥️ CLI Interface
+
+#### Interactive Mode
 ```bash
 npm start
 ```
@@ -52,7 +81,7 @@ The interactive mode guides you through:
 2. Automatic selection of relevant criteria
 3. Formatted analysis with trade-offs
 
-### Direct Command Usage
+#### Direct Command Usage
 
 ```bash
 # Compare cloud services
@@ -107,7 +136,7 @@ Remember: The best choice depends on your specific requirements and constraints.
 ## 🏗️ Project Structure
 
 ```
-├── src/
+├── src/                          # CLI application source
 │   ├── cli.js                    # Main CLI interface with Commander.js
 │   ├── comparators/              # Domain-specific comparison logic
 │   │   ├── CloudComparator.js    # Cloud services comparison
@@ -119,6 +148,10 @@ Remember: The best choice depends on your specific requirements and constraints.
 │   │   └── apiApproaches.js      # API approaches data & criteria
 │   └── utils/
 │       └── formatter.js          # Output formatting utilities
+├── public/                       # Web interface files
+│   ├── index.html                # Main web interface
+│   └── app.js                    # Frontend JavaScript logic
+├── server.js                     # HTTP server for web interface
 ├── .kiro/                        # Kiro configuration (required)
 │   ├── README.md                 # Kiro project documentation
 │   └── steering/
