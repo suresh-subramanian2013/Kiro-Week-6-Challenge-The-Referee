@@ -7,6 +7,7 @@
   "scripts": {
     "start": "node src/cli.js",
     "dev": "node --watch src/cli.js",
+    "web": "node server.js",
     "test": "node --test test/*.test.js"
   },
   "keywords": ["comparison", "decision-making", "trade-offs", "analysis"],
