@@ -2,6 +2,7 @@
   "name": "the-referee",
   "version": "1.0.0",
   "description": "A smart comparison tool that helps you make informed decisions by analyzing trade-offs",
+  "type": "module",
   "main": "src/cli.js",
   "scripts": {
     "start": "node src/cli.js",
